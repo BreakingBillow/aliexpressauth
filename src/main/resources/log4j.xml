@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p - %m%n"/>
+		</layout>
+	</appender>
+	<appender name="Debug" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="./log/debug/debug.log"/>
+		<param name="MaxBackupIndex" value="300"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="MaxFileSize" value="20MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %p [%c] - [%m]%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug"/>
+			<param name="LevelMax" value="debug"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>	
+		
+	<appender name="Info" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="./log/run/run.log"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="MaxBackupIndex" value="300"/>
+		<param name="MaxFileSize" value="20MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %p [%c] - [%m]%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="info"/>
+			<param name="LevelMax" value="info"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="Warn" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="./log/warn/warn.log"/>
+		<param name="MaxBackupIndex" value="3"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="MaxFileSize" value="20MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %p [%c] - [%m]%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="warn"/>
+			<param name="LevelMax" value="warn"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="Error" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="./log/error/error.log"/>
+		<param name="MaxBackupIndex" value="3"/>
+		<param name="Encoding" value="UTF-8"/>
+		<param name="MaxFileSize" value="20MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %p [%c] - [%m]%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="error"/>
+			<param name="LevelMax" value="error"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>		
+	</appender>	
+
+	<root>
+		<level value="Debug"/>
+		<appender-ref ref="STDOUT"/>
+		<appender-ref ref="Debug"/>
+		<appender-ref ref="Info"/>
+		<appender-ref ref="Warn"/>
+		<appender-ref ref="Error"/>
+	</root>
+	
+	
+</log4j:configuration>

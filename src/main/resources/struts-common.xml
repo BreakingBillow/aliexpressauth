@@ -1,0 +1,53 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="common" namespace="/common" extends="struts-default">
+
+		<action name="auth" method="doAuth" class="authActionBean">
+			<result name="input">/auth/request.jsp</result>
+		</action>
+
+		<action name="request" method="doRequestCode" class="authActionBean">
+
+			<result name="success" type="redirect">${getCodeForWebResult}
+			</result>
+
+		</action>
+
+
+		<action name="token" method="doRequestToken" class="authActionBean">
+
+			<result name="success">/auth/token.jsp
+			</result>
+
+		</action>
+
+
+		<action name="finish" method="doFinish" class="authActionBean">
+
+			<result name="success">/auth/finish.jsp
+			</result>
+
+		</action>
+
+
+
+
+		<action name="list" method="doListOrder" class="authActionBean">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="allowCaching">false</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="Order.xls"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+
+
+
+
+	</package>
+
+</struts>

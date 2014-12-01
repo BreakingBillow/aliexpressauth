@@ -1,0 +1,200 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.weiproduct</groupId>
+	<artifactId>webdemo</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1</version>
+	<name>webdemo Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Spring framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-instrument</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+
+		<!-- Struts 2 + Spring plugins -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.8</version>
+		</dependency>
+
+
+		<!-- Http Client -->
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+		<!-- Json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20131018</version>
+		</dependency>
+
+		
+		<!-- Jersey -->
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server</artifactId>
+		    <version>1.12</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-client</artifactId>
+		    <version>1.12</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-json</artifactId>
+		    <version>1.12</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-servlet</artifactId>
+		    <version>1.12</version>
+		</dependency>		
+
+	</dependencies>
+	<build>
+		<finalName>webdemo</finalName>
+	</build>
+</project>
